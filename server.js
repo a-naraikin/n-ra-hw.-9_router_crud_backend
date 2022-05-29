@@ -9,8 +9,11 @@ const app = new Koa();
 app.use(cors());
 app.use(koaBody({json: true}));
 
-let posts = [];
-let nextId = 1;
+let posts = [
+    {id: 1, content: 'Пост, относящийся к курсу React'},
+    {id: 2, content: 'Другой пост, относящийся к курсу по React'}
+];
+let nextId = 3;
 
 const router = new Router();
 
